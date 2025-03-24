@@ -176,20 +176,103 @@
 
 // 9. conditionals
 
-const age = parseInt(prompt("How old are you?"));
+// const age = parseInt(prompt("How old are you?"));
 
 // console.log(isNaN(age));
 
-if(isNaN(age) || age < 0) {
-    console.log("Please write a real positive number.");
-} else if(age < 18) {
-    console.log("You are too young.");
-} else if(age >= 18 && age <= 50) {
-    console.log("You can drink!");
-} else if(age > 50 && age <= 80){
-    console.log("You should exercise.");
-} else if(age === 100) {
-    console.log("Wow! You are wise");
-} else if(age > 80) {
-    console.log("You can do whatever you want.");
-} 
+// if(isNaN(age) || age < 0) {
+//     console.log("Please write a real positive number.");
+// } else if(age < 18) {
+//     console.log("You are too young.");
+// } else if(age >= 18 && age <= 50) {
+//     console.log("You can drink!");
+// } else if(age > 50 && age <= 80){
+//     console.log("You should exercise.");
+// } else if(age === 100) {
+//     console.log("Wow! You are wise");
+// } else if(age > 80) {
+//     console.log("You can do whatever you want.");
+// } 
+
+// 10. document object
+
+// document.title = "Hello! from JS";
+
+// const title = document.getElementById("title");
+
+// title.innerText = "Got you!";
+
+// console.log(title.id);
+// console.log(title.className);
+
+// const hellos = document.getElementsByClassName("hello");
+
+// hellos.innerText = "Got you!";
+
+// console.log(hellos);
+
+// const title = document.querySelectorAll(".hello h1");
+
+// console.log(title);
+
+// 11. event
+
+// const h1 = document.querySelector("div.hello:first-child h1");
+
+// console.dir(h1);
+
+// function handleTitleClick() {
+//     console.log("Title was clicked!");
+//     h1.style.color = "blue";
+// }
+
+// function handleMouseEnter() {
+//     h1.innerText = "Mouse is here!";
+// }
+
+// function handleMouseLeave() {
+//     h1.innerText = "Mouse is Gone!";
+// }
+
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "tomato";
+// }
+
+// function handleWindowCopy() {
+//     alert("copier!");
+// }
+
+// function handleWindowOffline() {
+//     alert("SOS NO Wifi");
+// }
+
+// function handleWindowOnline() {
+//     alert("ALL Goooooood!");
+// }
+
+
+// h1.addEventListener("click", handleTitleClick);
+// h1.addEventListener("mouseenter", handleMouseEnter);
+// h1.addEventListener("mouseleave", handleMouseLeave);
+
+// window.addEventListener("resize", handleWindowResize);
+// window.addEventListener("copy", handleWindowCopy);
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("online", handleWindowOnline);
+
+// 12. event 2
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+    const currentColor = h1.style.color;
+    let newColor;
+    if(currentColor === "blue") {
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
+}
+
+h1.addEventListener("click", handleTitleClick);
